@@ -1,5 +1,7 @@
 {% extends 'chat/base.html' %}
 
+{% load static %}  <!-- Make sure to load the static template tag library -->
+
 {% block title %}Chat - BeingAMom{% endblock %}
 
 {% block content %}
@@ -22,5 +24,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="/static/chat/js/chat.js"></script>
+<script src="{% static 'chat/js/chat.js' %}"></script>
 {% endblock %}

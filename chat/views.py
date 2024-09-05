@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from .models import Conversation, Message
 from .forms import SignUpForm
 import openai
+from django.shortcuts import render
 
 def register(request):
     if request.method == 'POST':
@@ -14,6 +15,9 @@ def register(request):
     else:
         form = SignUpForm()
     return render(request, 'chat/register.html', {'form': form})
+
+def chat_view(request):
+    return render(request, 'chat/chat.html')
 
 @login_required
 def chat(request):
