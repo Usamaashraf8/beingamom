@@ -44,3 +44,5 @@ beingamom/
                     logo.png
                     mother_child.jpg
     requirements.txt
+# Run server
+python manage.py runserver
