@@ -10,4 +10,37 @@ How to navigate through the different stages of your baby's development
 Helpful tips for managing your own health and well-being
 …and much more, this chatbot is here to assist you!
 
-Feel free to ask any questions, and we’ll provide you with guidance and resources to make your journey through motherhood smoother and more enjoyable.
+/Users/ashraf/repo/beingamom/README.md
+
+# Project structure
+beingamom/
+    manage.py
+    beingamom/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+    chat/
+        __init__.py
+        admin.py
+        apps.py
+        models.py
+        views.py
+        urls.py
+        forms.py
+        templates/
+            chat/
+                base.html
+                login.html
+                register.html
+                chat.html
+        static/
+            chat/
+                css/
+                    style.css
+                js/
+                    chat.js
+                img/
+                    logo.png
+                    mother_child.jpg
+    requirements.txt
