@@ -1,11 +1,14 @@
 from django.urls import path
-from django.contrib.auth import views as auth_views
-from . import views
+from . import api
 
 urlpatterns = [
-    path('', auth_views.LoginView.as_view(template_name='chat/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('register/', views.register, name='register'),
-    path('chat/', views.chat, name='chat'),
-    path('get_response/', views.get_response, name='get_response'),
+    path('api/register/', api.api_register, name='api_register'),
+    path('api/login/', api.api_login, name='api_login'),
+    path('api/logout/', api.api_logout, name='api_logout'),
+    path('api/children/', api.api_get_children, name='api_get_children'),
+    path('api/children/create/', api.api_create_child, name='api_create_child'),
+    path('api/chat/', api.api_chat, name='api_chat'),
+    path('api/analyze-image/', api.api_analyze_image, name='api_analyze_image'),
+    path('api/health-log/', api.api_health_log, name='api_health_log'),
+    path('api/health-logs/<int:child_id>/', api.api_get_health_logs, name='api_get_health_logs'),
 ]

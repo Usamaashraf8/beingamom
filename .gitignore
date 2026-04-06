@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+
+being_a_mom/.dart_tool/
+being_a_mom/build/
+
